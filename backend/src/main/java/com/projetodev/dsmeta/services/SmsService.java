@@ -42,7 +42,7 @@ public class SmsService {
 		}
 		
 		String msg = "O vendedor " + sale.getSellerName()
-				+ " foi destaque em " + mes + " '/' "
+				+ " foi destaque em " + mes + " / "
 				+ sale.getDate().getYear() + " com um total de R$ " 
 				+ String.format("%.0f",sale.getAmount());
 
