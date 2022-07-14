@@ -41,7 +41,7 @@ public class SmsService {
 			mes = String.valueOf(month);
 		}
 		
-		String valor = String.format("%.0f",sale.getAmount());
+		String valor = String.format("%.2f",sale.getAmount());
 		valor.replace("," , ".");
 		
 		String msg = "O vendedor " + sale.getSellerName()
