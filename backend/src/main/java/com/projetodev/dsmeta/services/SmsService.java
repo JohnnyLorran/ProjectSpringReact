@@ -8,6 +8,7 @@ import com.projetodev.dsmeta.entities.Sale;
 import com.projetodev.dsmeta.repositories.SaleRepository;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.rest.media.v1.MediaRecording.Format;
 import com.twilio.type.PhoneNumber;
 
 @Service
@@ -31,11 +32,17 @@ public class SmsService {
 	public void sendSms(Long saleId) {
 		
 		Sale sale = saleRepository.findById(saleId).get();
-		
-		
+		;
+		String mes = "0";
+		int month =  sale.getDate().getMonthValue();
+		if(month < 10 ) {
+			mes += String.valueOf(month);
+		}else {
+			mes = String.valueOf(month);
+		}
 		
 		String msg = "O vendedor " + sale.getSellerName()
-				+ " foi destaque em " + sale.getDate().getMonthValue() + " de "
+				+ " foi destaque em " + mes + " '/' "
 				+ sale.getDate().getYear() + " com um total de R$ " 
 				+ String.format("%.0f",sale.getAmount());
 
