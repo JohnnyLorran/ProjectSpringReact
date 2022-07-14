@@ -42,7 +42,6 @@ public class SmsService {
 		}
 		
 		String valor = String.format("%.2f",sale.getAmount());
-		valor.replace("," , ".");
 		
 		String msg = "O vendedor " + sale.getSellerName()
 				+ " foi destaque em " + mes + " / "
