@@ -44,8 +44,8 @@ public class SmsService {
 		}
 		
 		String valor = new DecimalFormat("#,##0.00").format(sale.getAmount());
-		valor.replaceAll(",", ".");
-		valor.replaceFirst(".",",");
+		valor.replaceAll(".", ",");
+		valor.replaceFirst(",",".");
 		
 		String msg = "O vendedor " + sale.getSellerName()
 				+ " foi destaque em " + mes + " / "
