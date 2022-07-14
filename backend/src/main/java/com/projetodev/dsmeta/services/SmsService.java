@@ -1,5 +1,7 @@
 package com.projetodev.dsmeta.services;
 
+import java.text.DecimalFormat;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -41,7 +43,7 @@ public class SmsService {
 			mes = String.valueOf(month);
 		}
 		
-		String valor = String.format("%.2f",sale.getAmount());
+		String valor = new DecimalFormat("#.##0,00").format(sale.getAmount());
 		
 		String msg = "O vendedor " + sale.getSellerName()
 				+ " foi destaque em " + mes + " / "
