@@ -44,7 +44,7 @@ public class SmsService {
 		}
 		
 		String valor = new DecimalFormat("#,##0.00").format(sale.getAmount());
-		valor.replaceAll(".", ",");
+		valor.replace(".", ",");
 		valor.replaceFirst(",",".");
 		
 		String msg = "O vendedor " + sale.getSellerName()
