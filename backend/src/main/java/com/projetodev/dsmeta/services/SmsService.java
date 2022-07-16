@@ -1,7 +1,5 @@
 package com.projetodev.dsmeta.services;
 
-import java.text.DecimalFormat;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -10,7 +8,6 @@ import com.projetodev.dsmeta.entities.Sale;
 import com.projetodev.dsmeta.repositories.SaleRepository;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
-import com.twilio.rest.media.v1.MediaRecording.Format;
 import com.twilio.type.PhoneNumber;
 
 @Service
